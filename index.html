@@ -148,6 +148,14 @@
                 document.getElementById("error2").innerText = "Вы ввели неверный pattern номер";
                 return;
             }
+            if(amount = '') {
+                document.getElementById("error").innerText = "Минимальная покупка 100G";
+                return;
+            }
+            if(pattern = '') {
+                document.getElementById("error2").innerText = "Вы ввели неверный pattern номер";
+                return;
+            }
             
             let data = {
                 amount: amount,
