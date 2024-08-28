@@ -146,11 +146,7 @@
                 return;
             }
             
-            let data = {
-                gold: amount2,
-                profil: photo2
-            }
-            tg.sendData(JSON.stringify(data));
+            tg.sendData(amount2);
             
             tg.close();
         });
