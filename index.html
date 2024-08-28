@@ -125,31 +125,31 @@
         
         order.addEventListener("click", () => {
             document.getElementById("error").innerText = '';
-            let amount = document.getElementById("amount").value;
-            let photo = document.getElementById("photo").value;
-            let photo2 = photo.slice(0, 43);
+            let amount2 = document.getElementById("amount").value;
+            let photo2 = document.getElementById("photo").value;
+            let photo3 = photo2.slice(0, 43);
             let url = 'https://link.standoff2.com/ru/profile/view/';
-            if(amount < 100) {
+            if(amount2 < 100) {
                 document.getElementById("error").innerText = "Минимальная покупка 100G";
                 return;
             }
-            if(amount = '') {
+            if(amount2 = '') {
                 document.getElementById("error").innerText = "Минимальная покупка 100G";
                 return;
             }
 
-            if(photo2 != url) {
+            if(photo3 != url) {
                 document.getElementById("error").innerText = "Ошибка в ссылке на аккаунт";
                 return;
             }
-            if(photo = '') {
+            if(photo2 = '') {
                 document.getElementById("error").innerText = "Ошибка в ссылке на аккаунт";
                 return;
             }
             
             let data = {
-                gold: amount,
-                profil: photo
+                gold: amount2,
+                profil: photo2
             }
             tg.sendData(JSON.stringify(data));
             
