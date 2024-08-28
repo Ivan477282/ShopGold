@@ -124,8 +124,6 @@
         });
         
         order.addEventListener("click", () => {
-            document.getElementById("main").style.display = "none";
-            document.getElementById("form").style.display = "block";
             document.getElementById("error").innerText = '';
             let amount = document.getElementById("amount").value;
             let photo = document.getElementById("photo").value;
@@ -153,7 +151,6 @@
                 amount: amount,
                 photo: photo
             } 
-            
             tg.sendData(JSON.stringify(data));
             
             tg.close();
