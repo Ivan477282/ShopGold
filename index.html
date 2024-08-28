@@ -125,10 +125,12 @@
         
         order.addEventListener("click", () => {
             document.getElementById("error").innerText = '';
-            let amount = document.getElementById("amount").value;
-            let photo = document.getElementById("photo").value;
+            let num1 = document.getElementById("amount");
+            let num2 = document.getElementById("photo");
+            let amount = num1.value;
+            let photo = num2.value;
             let photo2 = photo.slice(0, 43);
-            let url = 'https://link.standoff2.com/ru/profile/view/'
+            let url = 'https://link.standoff2.com/ru/profile/view/';
             if(amount < 100) {
                 document.getElementById("error").innerText = "Минимальная покупка 100G";
                 return;
