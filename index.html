@@ -128,7 +128,6 @@
             let amount = document.getElementById("amount").value;
             let photo = document.getElementById("photo").value;
             const regex = new RegExp('https:\/\/link\.standoff2\.com\/ru\/profile\/view\/[0-9]+');
-            let reg = regex.test(photo);
             if(amount < 100) {
                 document.getElementById("error").innerText = "Минимальная покупка 100G";
                 return;
@@ -142,7 +141,7 @@
                 document.getElementById("error").innerText = "Ошибка в ссылке на аккаунт";
                 return;
             }
-            if(reg = false) {
+            if(!regex.test(photo)) {
                 document.getElementById("error").innerText = "Ошибка в ссылке на аккаунт";
                 return;
             }
