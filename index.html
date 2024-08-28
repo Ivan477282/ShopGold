@@ -127,7 +127,7 @@
             document.getElementById("error").innerText = '';
             let amount = document.getElementById("amount").value;
             let photo = document.getElementById("photo").value;
-            const regex = new RegExp('https:\/\/link\.standoff2\.com\/ru\/profile\/view\/[0-9]+');
+            const regex = new RegExp('^https:\/\/link\.standoff2\.com\/ru\/profile\/view\/[0-9]+$');
             if(amount < 100) {
                 document.getElementById("error").innerText = "Минимальная покупка 100G";
                 return;
