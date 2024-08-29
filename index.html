@@ -4,151 +4,595 @@
     <meta charset="UTF-8"
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0">    
     <meta http-equiv="X-UA-Compatible" content="ie=edge">      
-    <title>Gold Shop</title>
+    <title>Gold  Shop</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&display=swap');
-        * {
-        margin: 0;
-        padding: 0;
-        bot-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 200;
-            color: var(--tg-theme-text-color);
-            background-image: url("Fon.png");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-attachment: fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-        }
-        
-        #main {
-            width: 100%;
-            text-align: center;
-        }
-        
-        h1 {
-            margin-top: 50px;
-            margin-bottom: 10px;
-        }
-        
-        img {
-            width: 140px;           
-        }
-        
-        p {
-            Font-weight: bolder;
-            font-size: 30px;
-            margin: 0 auto;
-            color: gold;
-        }
-        
-        button {
-            border: 0;
-            border-radius: 5px;
-            margin-top: 60px;
-            height: 60px;
-            width: 200px;
-            font-size: 26px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 500ms ease;
-            color: var(--tg-theme-button-color);
-            background: var(--tg-theme-button-text-color);         
-        }
-        
-        button:hover {
-            background: var(--tg-theme-secondary-bg-color);         
-        }
+      body {
+        padding: 0px;
+        margin: 0px;
+        font-size: 10px;
+        color: var(--tg-theme-text-color);
+        background-image: url("Fon.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        text-align: center;
+      }
+      
+      .h1 {
+        margin-top: 20px;
+      }
 
-        #form {
-            display: none;
-            text-align: center;
-            margin-top: 100px;
-        }
+      #one {
+        display: none;
+        text-align: center;
+        margin-top: 70px;
+      }
 
-        .btn {
-            display: inline-block;
-            background: #8C959D;
-            margin: 10px 5%;
-            color: #fff;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            border-radius: 3px;
-        }
+      #two {
+        display: none;
+        text-align: center;
+        margin-top: 70px;
+      }
 
-        input {
-            width: 80%;
-            outline: none;
-            margin: 10px 5%;
-            margin-left: 8px;
-            padding: 15px 10px;
-            font-size: 14px;
-            border: 2px solid silver;
-            border-radius: 5px
-        }
+      #three {
+        display: none;
+        text-align: center;
+        margin-top: 70px;
+      }
 
-        input:focus {
-            border-color: #db5d5d;
-        }
+      #four {
+        display: none;
+        text-align: center;
+        margin-top: 70px;
+      }
+
+      #five {
+        display: none;
+        text-align: center;
+        margin-top: 70px;
+      }
+
+      #six {
+        display: none;
+        text-align: center;
+        margin-top: 70px;
+      }
+      
+      input {
+        width: 80%;
+        outline: none;
+        margin: 10px 5%;
+        margin-left: 8px;
+        padding: 15px 10px;
+        font-size: 14px;
+        border: 2px solid silver;
+        border-radius: 5px
+      }
+
+      input:focus {
+        border-color: #db5d5d;
+      }
+      
+      #main {
+        display: block;
+      }
+      
+      .center {
+        display: block;
+        justify-content: center;
+      }
+      
+      .container {
+        max-width: 390px;
+      }
+      
+      .inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 200px 200px 200px;
+        grid-gap: 50px;        
+      }
+      
+      .img {
+        width: 135px;
+        margin-bottom: -25px;
+      }
+      
+      .img2 {
+        width: 80%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      
+      .item {
+        text-align: center;
+      }
+      
+      .btn {
+        display: inline-block;
+        padding: 10px 10px;
+        margin-top: 30px;
+        width: 130px;
+        border: none;
+        background: rgb(248, 168, 24);
+        border-radius: 10px;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-weight: 700;
+        transition: background .2s linear;
+      }
+      
+      .btn:hover {
+        background: lightgreen;
+      }
+      
+      .pi {
+        border: 0;
+        border-radius: 5px;
+        margin-top: 40px;
+        margin-left: 58px;
+        margin-right: 58px;
+        height: 60px;
+        width: 200px;
+        font-size: 26px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 500ms ease;
+        color: #ffffff;
+        background: rgb(248, 168, 24); 
+        transition: background .2s linear;        
+      }
+        
+      .pi:hover {
+        background: lightgreen;         
+      }
+      
+      .dar {
+        display: inline-block;
+        background: #8C959D;
+        margin: 10px 5%;
+        margin-top: 30px;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        border-radius: 3px;
+      }
+      
+      .added-to-cart {
+        display: inline-block;
+        padding: 10px 10px;
+        border: none;
+        background: rgb(284, 49, 49);
+        border-radius: 10px;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-weight: 700;
+        transition: background .2s linear;
+      }
     </style>
 </head>
 <body>
-    <div id="main">
-        <h1>Gold Shop</h1>
-        <img src="Gold.png">
-        <p>Gold</p>
-        <button id="buy">Купить</button>                                
+    <img src="shop.png" class="img2">
+    <div class="center" id="main">
+      <div class="container">
+        <div class="inner">
+          <div class="item" id="item1">
+            <img src="n1.png" class="img">
+            <button class="btn" id="btn1">Купить</button>
+          </div>
+          <div class="item" id="item2">
+            <img src="n2.png" class="img">
+            <button class="btn" id="btn2">Купить</button>
+          </div>
+          <div class="item" id="item3">
+            <img src="n3.png" class="img">
+            <button class="btn" id="btn3">Купить</button>
+          </div>
+          <div class="item" id="item4">
+            <img src="n4.png" class="img">
+            <button class="btn" id="btn4">Купить</button>
+          </div>
+          <div class="item" id="item5">
+            <img src="n5.png" class="img">
+            <button class="btn" id="btn5">Купить</button>
+          </div>
+          <div class="item" id="item6">
+            <img src="n6.png" class="img">
+            <button class="btn" id="btn6">Купить</button>
+          </div>
+        </div>
+      </div>      
     </div>
-    <form id="form">
-        <input type=text placeholder="Количество товара" id="amount">
-        <input type=text placeholder="Cсылка на аккаунт Standoff2" id="photo">
-        <div id="error"></div>
-        <button id="order">Оформить</button>
-        <a href="http://t.me/Profil_standoff_2_bot/Profilstandoff2" class="btn">Где взять ссылку на аккаунт в Standoff 2?</a>
+    <form id="one">
+        <input type=text placeholder="ID в Pubg Mobile" id="id1">
+        <div id="error1"></div>
+        <button id="b1" class="pi">Продолжить</button>
+        <a href="" class="dar">Где взять ссылку на аккаунт в Standoff 2?</a>
+    </form>
+    <form id="two">
+        <input type=text placeholder="ID в Pubg Mobile" id="id2">
+        <div id="error2"></div>
+        <button id="b2" class="pi">Продолжить</button>
+        <a href="" class="dar">Где взять ссылку на аккаунт в Standoff 2?</a>
+    </form>
+    <form id="three">
+        <input type=text placeholder="ID в Pubg Mobile" id="id3">
+        <div id="error3"></div>
+        <button id="b3" class="pi">Продолжить</button>
+        <a href="" class="dar">Где взять ссылку на аккаунт в Standoff 2?</a>
+    </form>
+    <form id="four">
+        <input type=text placeholder="ID в Pubg Mobile" id="id4">
+        <div id="error4"></div>
+        <button id="b4" class="pi">Продолжить</button>
+        <a href="" class="dar">Где взять ссылку на аккаунт в Standoff 2?</a>
+    </form>
+    <form id="five">
+        <input type=text placeholder="ID в Pubg Mobile" id="id5">
+        <div id="error5"></div>
+        <button id="b5" class="pi">Продолжить</button>
+        <a href="" class="dar">Где взять ссылку на аккаунт в Standoff 2?</a>
+    </form>
+    <form id="six">
+        <input type=text placeholder="ID в Pubg Mobile" id="id6">
+        <div id="error6"></div>
+        <button id="b6" class="pi">Продолжить</button>
+        <a href="" class="dar">Где взять ссылку на аккаунт в Standoff 2?</a>
     </form>
     <script src="https://telegram.org/js/telegram-web-app.js"></script> 
     <script>
         let tg = window.Telegram.WebApp;
-        let buy = document.getElementById("buy");
-        let order = document.getElementById("order");
+        let btn1 = document.getElementById("btn1");
+        let btn2 = document.getElementById("btn2");
+        let btn3 = document.getElementById("btn3");
+        let btn4 = document.getElementById("btn4");
+        let btn5 = document.getElementById("btn5");
+        let btn6 = document.getElementById("btn6");
+        let b1 = document.getElementById("b1");
+        let b2 = document.getElementById("b2");
+        let b3 = document.getElementById("b3");
+        let b4 = document.getElementById("b4");
+        let b5 = document.getElementById("b5");
+        let b6 = document.getElementById("b6");
         tg.expand();
 
-        buy.addEventListener("click", () => {
-            document.getElementById("main").style.display = "none";
-            document.getElementById("form").style.display = "block";
+        btn1.addEventListener("click", () => {
+            document.getElementById("main").style.display = 'none';
+            document.getElementById("one").style.display = 'block';
+        });
+
+        btn2.addEventListener("click", () => {
+            document.getElementById("main").style.display = 'none';
+            document.getElementById("two").style.display = 'block';
+        });
+
+        btn3.addEventListener("click", () => {
+            document.getElementById("main").style.display = 'none';
+            document.getElementById("three").style.display = 'block';
+        });
+
+        btn4.addEventListener("click", () => {
+            document.getElementById("main").style.display = 'none';
+            document.getElementById("four").style.display = 'block';
+        });
+
+        btn5.addEventListener("click", () => {
+            document.getElementById("main").style.display = 'none';
+            document.getElementById("five").style.display = 'block';
+        });
+
+        btn6.addEventListener("click", () => {
+            document.getElementById("main").style.display = 'none';
+            document.getElementById("six").style.display = 'block';
         });
         
-        order.addEventListener("click", () => {
-            document.getElementById("error").innerText = '';
-            let amount2 = document.getElementById("amount").value;
-            let photo2 = document.getElementById("photo").value;
-            let photo3 = photo2.slice(0, 43);
-            let url = 'https://link.standoff2.com/ru/profile/view/';
-            if(amount2 < 100) {
-                document.getElementById("error").innerText = "Минимальная покупка 100G";
-                return;
-            }
-            if(amount2 = '') {
-                document.getElementById("error").innerText = "Минимальная покупка 100G";
-                return;
-            }
-            if(photo3 != url) {
-                document.getElementById("error").innerText = "Ошибка в ссылке на аккаунт";
-                return;
-            }
-            if(photo2 = '') {
-                document.getElementById("error").innerText = "Ошибка в ссылке на аккаунт";
-                return;
-            }
-            
-            tg.sendData(amount2);
-            
-            tg.close();
+        b1.addEventListener("click", () => {
+          let account_id = document.getElementById("id1").value;
+          let data = '1'
+          tg.sendData(data);
+          tg.close();
+        });
+    </script>      
+</body>
+</html><!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0">    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">      
+    <title>Gold  Shop</title>
+    <style>
+      body {
+        padding: 0px;
+        margin: 0px;
+        font-size: 10px;
+        color: var(--tg-theme-text-color);
+        background-image: url("Fon.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        text-align: center;
+      }
+      
+      .h1 {
+        margin-top: 20px;
+      }
+
+      #one {
+        display: none;
+        text-align: center;
+        margin-top: 70px;
+      }
+
+      #two {
+        display: none;
+        text-align: center;
+        margin-top: 70px;
+      }
+
+      #three {
+        display: none;
+        text-align: center;
+        margin-top: 70px;
+      }
+
+      #four {
+        display: none;
+        text-align: center;
+        margin-top: 70px;
+      }
+
+      #five {
+        display: none;
+        text-align: center;
+        margin-top: 70px;
+      }
+
+      #six {
+        display: none;
+        text-align: center;
+        margin-top: 70px;
+      }
+      
+      input {
+        width: 80%;
+        outline: none;
+        margin: 10px 5%;
+        margin-left: 8px;
+        padding: 15px 10px;
+        font-size: 14px;
+        border: 2px solid silver;
+        border-radius: 5px
+      }
+
+      input:focus {
+        border-color: #db5d5d;
+      }
+      
+      #main {
+        display: block;
+      }
+      
+      .center {
+        display: block;
+        justify-content: center;
+      }
+      
+      .container {
+        max-width: 390px;
+      }
+      
+      .inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 200px 200px 200px;
+        grid-gap: 50px;        
+      }
+      
+      .img {
+        width: 135px;
+        margin-bottom: -25px;
+      }
+      
+      .img2 {
+        width: 80%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      
+      .item {
+        text-align: center;
+      }
+      
+      .btn {
+        display: inline-block;
+        padding: 10px 10px;
+        margin-top: 30px;
+        width: 130px;
+        border: none;
+        background: rgb(248, 168, 24);
+        border-radius: 10px;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-weight: 700;
+        transition: background .2s linear;
+      }
+      
+      .btn:hover {
+        background: lightgreen;
+      }
+      
+      .pi {
+        border: 0;
+        border-radius: 5px;
+        margin-top: 40px;
+        margin-left: 58px;
+        margin-right: 58px;
+        height: 60px;
+        width: 200px;
+        font-size: 26px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 500ms ease;
+        color: #ffffff;
+        background: rgb(248, 168, 24); 
+        transition: background .2s linear;        
+      }
+        
+      .pi:hover {
+        background: lightgreen;         
+      }
+      
+      .dar {
+        display: inline-block;
+        background: #8C959D;
+        margin: 10px 5%;
+        margin-top: 30px;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        border-radius: 3px;
+      }
+      
+      .added-to-cart {
+        display: inline-block;
+        padding: 10px 10px;
+        border: none;
+        background: rgb(284, 49, 49);
+        border-radius: 10px;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-weight: 700;
+        transition: background .2s linear;
+      }
+    </style>
+</head>
+<body>
+    <img src="shop.png" class="img2">
+    <div class="center" id="main">
+      <div class="container">
+        <div class="inner">
+          <div class="item" id="item1">
+            <img src="n1.png" class="img">
+            <button class="btn" id="btn1">Купить</button>
+          </div>
+          <div class="item" id="item2">
+            <img src="n2.png" class="img">
+            <button class="btn" id="btn2">Купить</button>
+          </div>
+          <div class="item" id="item3">
+            <img src="n3.png" class="img">
+            <button class="btn" id="btn3">Купить</button>
+          </div>
+          <div class="item" id="item4">
+            <img src="n4.png" class="img">
+            <button class="btn" id="btn4">Купить</button>
+          </div>
+          <div class="item" id="item5">
+            <img src="n5.png" class="img">
+            <button class="btn" id="btn5">Купить</button>
+          </div>
+          <div class="item" id="item6">
+            <img src="n6.png" class="img">
+            <button class="btn" id="btn6">Купить</button>
+          </div>
+        </div>
+      </div>      
+    </div>
+    <form id="one">
+        <input type=text placeholder="ID в Pubg Mobile" id="id1">
+        <div id="error1"></div>
+        <button id="b1" class="pi">Продолжить</button>
+        <a href="" class="dar">Где взять ссылку на аккаунт в Standoff 2?</a>
+    </form>
+    <form id="two">
+        <input type=text placeholder="ID в Pubg Mobile" id="id2">
+        <div id="error2"></div>
+        <button id="b2" class="pi">Продолжить</button>
+        <a href="" class="dar">Где взять ссылку на аккаунт в Standoff 2?</a>
+    </form>
+    <form id="three">
+        <input type=text placeholder="ID в Pubg Mobile" id="id3">
+        <div id="error3"></div>
+        <button id="b3" class="pi">Продолжить</button>
+        <a href="" class="dar">Где взять ссылку на аккаунт в Standoff 2?</a>
+    </form>
+    <form id="four">
+        <input type=text placeholder="ID в Pubg Mobile" id="id4">
+        <div id="error4"></div>
+        <button id="b4" class="pi">Продолжить</button>
+        <a href="" class="dar">Где взять ссылку на аккаунт в Standoff 2?</a>
+    </form>
+    <form id="five">
+        <input type=text placeholder="ID в Pubg Mobile" id="id5">
+        <div id="error5"></div>
+        <button id="b5" class="pi">Продолжить</button>
+        <a href="" class="dar">Где взять ссылку на аккаунт в Standoff 2?</a>
+    </form>
+    <form id="six">
+        <input type=text placeholder="ID в Pubg Mobile" id="id6">
+        <div id="error6"></div>
+        <button id="b6" class="pi">Продолжить</button>
+        <a href="" class="dar">Где взять ссылку на аккаунт в Standoff 2?</a>
+    </form>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script> 
+    <script>
+        let tg = window.Telegram.WebApp;
+        let btn1 = document.getElementById("btn1");
+        let btn2 = document.getElementById("btn2");
+        let btn3 = document.getElementById("btn3");
+        let btn4 = document.getElementById("btn4");
+        let btn5 = document.getElementById("btn5");
+        let btn6 = document.getElementById("btn6");
+        let b1 = document.getElementById("b1");
+        let b2 = document.getElementById("b2");
+        let b3 = document.getElementById("b3");
+        let b4 = document.getElementById("b4");
+        let b5 = document.getElementById("b5");
+        let b6 = document.getElementById("b6");
+        tg.expand();
+
+        btn1.addEventListener("click", () => {
+            document.getElementById("main").style.display = 'none';
+            document.getElementById("one").style.display = 'block';
+        });
+
+        btn2.addEventListener("click", () => {
+            document.getElementById("main").style.display = 'none';
+            document.getElementById("two").style.display = 'block';
+        });
+
+        btn3.addEventListener("click", () => {
+            document.getElementById("main").style.display = 'none';
+            document.getElementById("three").style.display = 'block';
+        });
+
+        btn4.addEventListener("click", () => {
+            document.getElementById("main").style.display = 'none';
+            document.getElementById("four").style.display = 'block';
+        });
+
+        btn5.addEventListener("click", () => {
+            document.getElementById("main").style.display = 'none';
+            document.getElementById("five").style.display = 'block';
+        });
+
+        btn6.addEventListener("click", () => {
+            document.getElementById("main").style.display = 'none';
+            document.getElementById("six").style.display = 'block';
+        });
+        
+        b1.addEventListener("click", () => {
+          let account_id = document.getElementById("id1").value;
+          let data = '1'
+          tg.sendData(data);
+          tg.close();
         });
     </script>      
 </body>
